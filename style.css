@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(9deg,rgb(184 184 221)23.8%,rgb(88 88 192) 92%);
+    font-family: 'Baloo Bhaijaan 2', cursive;
+}
+.container{
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 15px 3px 20px;
+    display: flex;
+    padding: 20px 20px;
+    position: relative;
+    top: -20px;
+    margin: 100px 0 ;
+    z-index: 10;
+    
+}
+
+.imageContainer{
+    position: relative;
+    width: 110px;
+}
+
+.imageContainer img{
+    width: inherit;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: rotate 3s linear infinite;
+    animation-play-state: paused;
+}
+.container.play .imageContainer img{
+    animation-play-state: running;
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.actionBtn{
+    background-color: white;
+    border: 0;
+    color: #cfaada;
+    font-size: 20px;
+    padding: 6px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+.bigger{
+    color: #cfaada;
+    font-size: 30px;
+}
+.musicbox{
+    width: 90%;
+    background-color: rgb(167 167 211);
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    opacity: 0;
+    z-index: 0;
+    padding: 10px 10px 10px 150px;
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in, opacity 0.3s;
+}
+.musicbox h4{
+    margin: 0px;
+}
+.container.play .musicbox{
+    opacity: 1;
+    transform: translateY(-100%);
+}
+.songChangerContainer{
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 4px;
+    width: 100%;
+}
+.songChanger{
+    background-color: rgb(211, 114, 114);
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}

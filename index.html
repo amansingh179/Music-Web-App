@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap" rel="stylesheet">
+    <title>DJ wale Babu</title>
+</head>
+<body>
+    <h1>DJ WALE BABU</h1>
+
+    <div class="container">
+        <div class="musicbox">
+            <h4 class="SongTitle">Memories</h4>
+            <div class="songChangerContainer" id="songChangerContainerid">
+                <div class="songChanger" id="songChangerid"></div>
+            </div>
+        </div>
+
+        <audio src="music/347Aidan_Memories.mp3" id="audio"></audio>
+
+        <div class="imageContainer">
+            <img src="img/memories.jpg" alt="cover" id="audio-cover">
+        </div>
+
+        <div class="controls">
+            <button id="goBack" class="actionBtn">
+                <i class="fa-solid fa-backward"></i>
+            </button>
+            <button id="play" class="actionBtn bigger">
+                <i class="fa-solid fa-play"></i>
+            </button>
+            <button id="next" class="actionBtn">
+                <i class="fa-solid fa-forward"></i>
+            </button>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+<script src="https://kit.fontawesome.com/7ef00fd103.js" crossorigin="anonymous"></script>
+</html>
